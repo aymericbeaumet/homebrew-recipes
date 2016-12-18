@@ -3,8 +3,9 @@
 > :beer: Homebrew Formulae
 
 [homebrew-formulae](https://github.com/aymericbeaumet/homebrew-formulae)
-contains formulae my personal projects, which do not belong to the [core
-formulae](https://github.com/Homebrew/homebrew-core).
+contains formulae which do not belong to the [core
+formulae](https://github.com/Homebrew/homebrew-core). I mainly use it for my
+personal projects.
 
 ## Installation
 
