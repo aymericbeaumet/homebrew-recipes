@@ -4,7 +4,11 @@ class Algoliabackup < Formula
 
   url "https://github.com/aymericbeaumet/algoliabackup.sh/archive/master.zip"
   head "https://github.com/aymericbeaumet/algoliabackup.sh.git"
+  bottle :unneeded
 
   depends_on "jq"
-  bin.install "bin/algoliabackup"
+
+  def install
+    bin.install 'bin/algoliabackup'
+  end
 end
