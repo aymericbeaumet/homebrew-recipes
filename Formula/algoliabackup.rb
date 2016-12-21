@@ -1,9 +1,9 @@
 class Algoliabackup < Formula
   desc "Easily backup your Algolia indices"
-  homepage "https://github.com/aymericbeaumet/algoliabackup.sh"
+  homepage "https://github.com/aymericbeaumet/algoliabackup"
 
-  url "https://github.com/aymericbeaumet/algoliabackup.sh/archive/v0.0.1.zip"
-  head "https://github.com/aymericbeaumet/algoliabackup.sh.git"
+  url "https://github.com/aymericbeaumet/algoliabackup/archive/v1.0.0.zip"
+  head "https://github.com/aymericbeaumet/algoliabackup.git"
   bottle :unneeded
 
   depends_on "jq"
