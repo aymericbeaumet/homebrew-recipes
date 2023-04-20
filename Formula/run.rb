@@ -5,21 +5,21 @@
 class Run < Formula
   desc "Run is a lightweight, standalone tool that manages tasks and processes for you."
   homepage "https://run-cli.org"
-  version "0.0.42"
+  version "0.0.43"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aymericbeaumet/run/releases/download/v0.0.42/run-x86_64-apple-darwin.tar.gz"
-      sha256 "604a6c29a7ad9dca4132660f840314e300f7333ce03585d323ee1f1b515f1d6f"
+      url "https://github.com/aymericbeaumet/run/releases/download/v0.0.43/run-x86_64-apple-darwin.tar.gz"
+      sha256 "f8f5cdaa3aac0d462dae4dd478867bbd2326b3a2e7ace6607d5875934e64156a"
 
       def install
         bin.install "run"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aymericbeaumet/run/releases/download/v0.0.42/run-aarch64-apple-darwin.tar.gz"
-      sha256 "cf6e500b2cb6d0eae5163b7e43c35c2e12c8f466d2eb69b62a8a5b3fc2e5fbeb"
+      url "https://github.com/aymericbeaumet/run/releases/download/v0.0.43/run-aarch64-apple-darwin.tar.gz"
+      sha256 "30c4264f73c3e4c769cee5b99e93f847c717e754251ee7aa1e851a8df89c4dec"
 
       def install
         bin.install "run"
@@ -29,16 +29,16 @@ class Run < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aymericbeaumet/run/releases/download/v0.0.42/run-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "5cf43eda9475278eb3c70f4ca4afe563369f0afbba1791b032524874642841b5"
+      url "https://github.com/aymericbeaumet/run/releases/download/v0.0.43/run-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "18240a71d268999d2bddba91e32118a63c8c808a8e354d7209c1dedb441fa9e2"
 
       def install
         bin.install "run"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aymericbeaumet/run/releases/download/v0.0.42/run-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "8dc2c68f74d22bb577cbd5f8098577807ac34a53bd1678a50e83c46fe5fbbe16"
+      url "https://github.com/aymericbeaumet/run/releases/download/v0.0.43/run-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "18a8b2884b164b4dcf54760abf653048126ea54da490d1bd0b861c0b41c26d3a"
 
       def install
         bin.install "run"
