@@ -5,21 +5,21 @@
 class Run < Formula
   desc "Run is a lightweight, standalone tool that manages tasks and processes for you."
   homepage "https://run-cli.org"
-  version "0.0.40"
+  version "0.0.41"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aymericbeaumet/run/releases/download/v0.0.40/run-x86_64-apple-darwin.tar.gz"
-      sha256 "e9aa693a3f99bde48fa98e3b6997345db7f24bc97198ff459d7b14e5c099e8e1"
+      url "https://github.com/aymericbeaumet/run/releases/download/v0.0.41/run-x86_64-apple-darwin.tar.gz"
+      sha256 "2a1772167f1efe6c0349ea24e7517b66a9560929fe30d5208943e2e614dd83c2"
 
       def install
         bin.install "run"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aymericbeaumet/run/releases/download/v0.0.40/run-aarch64-apple-darwin.tar.gz"
-      sha256 "27e11600ee2dac18d045b012122a49d883df2dbc7b5fcb62d070fb4e32e9fd2d"
+      url "https://github.com/aymericbeaumet/run/releases/download/v0.0.41/run-aarch64-apple-darwin.tar.gz"
+      sha256 "4e3cc73f82ee8522208ac9ff67ae15612b9ac8d017240a7f31b3389962756506"
 
       def install
         bin.install "run"
@@ -28,17 +28,17 @@ class Run < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/aymericbeaumet/run/releases/download/v0.0.40/run-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "34fa820c7d49fd158099053a5fc348e0221f3e4fe4fa1fd6529b6c9bb17f8059"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/aymericbeaumet/run/releases/download/v0.0.41/run-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "8816590a90b5db08dfc4845a6f98b5e1013ec4c81de6f09f3293f99b8c53f099"
 
       def install
         bin.install "run"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aymericbeaumet/run/releases/download/v0.0.40/run-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "28c9e043affe4e37c8cf73b5819e3b634eb11349f37dfed6e0d6e2de01155fc0"
+    if Hardware::CPU.intel?
+      url "https://github.com/aymericbeaumet/run/releases/download/v0.0.41/run-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "1cd558dcc03fa4d6a68958acb20bfb2ff3a4270a71b241ce333e92bb5e60ec24"
 
       def install
         bin.install "run"
