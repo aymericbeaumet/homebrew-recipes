@@ -5,21 +5,21 @@
 class RunCli < Formula
   desc "Run is a lightweight, standalone tool that manages tasks and processes for you."
   homepage "https://run-cli.org"
-  version "0.0.46"
+  version "0.0.49"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aymericbeaumet/run-cli/releases/download/0.0.46/run-0.0.46-x86_64-apple-darwin.tar.gz"
-      sha256 "15b302ac7c2a11e3c15d61d270f599d94b89aafa180be746162e94ae43002872"
+      url "https://github.com/aymericbeaumet/run-cli/releases/download/0.0.49/run-0.0.49-x86_64-apple-darwin.tar.gz"
+      sha256 "9476955518b06c368969317eea5f8385f85d4be25797aef6ca725a6dd13e8bcd"
 
       def install
         bin.install "run"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aymericbeaumet/run-cli/releases/download/0.0.46/run-0.0.46-aarch64-apple-darwin.tar.gz"
-      sha256 "9aa418363a51c9c43805dae1ebdf7ec809c104d3fd8a94f7aa177677f9d88aab"
+      url "https://github.com/aymericbeaumet/run-cli/releases/download/0.0.49/run-0.0.49-aarch64-apple-darwin.tar.gz"
+      sha256 "6d34c503c09311878e74c51c45ff1b16221d059f41642e91a6f3b35dc24b5e69"
 
       def install
         bin.install "run"
@@ -28,17 +28,17 @@ class RunCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/aymericbeaumet/run-cli/releases/download/0.0.46/run-0.0.46-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "e8a5667f10a9cd9520883389e6636b813d0f6db11c14f0d1ab29d5b1a71de136"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/aymericbeaumet/run-cli/releases/download/0.0.49/run-0.0.49-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "f1b54da0f8a77240751ebf920ea94d15e1bd1280421f2a1c72e5c1f49ae35d04"
 
       def install
         bin.install "run"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aymericbeaumet/run-cli/releases/download/0.0.46/run-0.0.46-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "4c8f610c9de7d64520aa4e1e2805760805da51396de63faf88abc4b7dc20225c"
+    if Hardware::CPU.intel?
+      url "https://github.com/aymericbeaumet/run-cli/releases/download/0.0.49/run-0.0.49-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "8e5d72a6151865f000171bc1b5f272690dfbf369e88768b1c04c3bc0bdc01344"
 
       def install
         bin.install "run"
