@@ -5,21 +5,21 @@
 class RunCli < Formula
   desc "Run is a lightweight, standalone tool that manages tasks and processes for you."
   homepage "https://run-cli.org"
-  version "0.0.49"
+  version "0.0.51"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aymericbeaumet/run-cli/releases/download/0.0.49/run-0.0.49-x86_64-apple-darwin.tar.gz"
-      sha256 "9476955518b06c368969317eea5f8385f85d4be25797aef6ca725a6dd13e8bcd"
+      url "https://github.com/aymericbeaumet/run-cli/releases/download/0.0.51/run-0.0.51-x86_64-apple-darwin.tar.gz"
+      sha256 "73e70e9401db21e0fb05ec65e77f47ca539c80394c6d001eb2e2adc456aaaace"
 
       def install
         bin.install "run"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aymericbeaumet/run-cli/releases/download/0.0.49/run-0.0.49-aarch64-apple-darwin.tar.gz"
-      sha256 "6d34c503c09311878e74c51c45ff1b16221d059f41642e91a6f3b35dc24b5e69"
+      url "https://github.com/aymericbeaumet/run-cli/releases/download/0.0.51/run-0.0.51-aarch64-apple-darwin.tar.gz"
+      sha256 "eea51fdefced62a517adf7f65e340a58c345e3df541ff5417a93cb1b1ad8b3a9"
 
       def install
         bin.install "run"
@@ -29,16 +29,16 @@ class RunCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aymericbeaumet/run-cli/releases/download/0.0.49/run-0.0.49-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "f1b54da0f8a77240751ebf920ea94d15e1bd1280421f2a1c72e5c1f49ae35d04"
+      url "https://github.com/aymericbeaumet/run-cli/releases/download/0.0.51/run-0.0.51-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "c2ac818a0bd1d10e88145dc2103f5ed7a05baa14fd4cbec7f982f457271bd0ca"
 
       def install
         bin.install "run"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aymericbeaumet/run-cli/releases/download/0.0.49/run-0.0.49-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "8e5d72a6151865f000171bc1b5f272690dfbf369e88768b1c04c3bc0bdc01344"
+      url "https://github.com/aymericbeaumet/run-cli/releases/download/0.0.51/run-0.0.51-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "f361884966e79520cc2a7c8b375a4f181d96dba408708a1967542b4532d7dba8"
 
       def install
         bin.install "run"
