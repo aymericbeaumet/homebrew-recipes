@@ -5,21 +5,21 @@
 class Run < Formula
   desc "Run is a lightweight, standalone tool that manages tasks and processes for you."
   homepage "https://run-cli.org"
-  version "0.0.43"
+  version "0.0.53"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/aymericbeaumet/run/releases/download/v0.0.43/run-x86_64-apple-darwin.tar.gz"
-      sha256 "f8f5cdaa3aac0d462dae4dd478867bbd2326b3a2e7ace6607d5875934e64156a"
+    if Hardware::CPU.arm?
+      url "https://github.com/aymericbeaumet/run/releases/download/0.0.53/run-0.0.53-aarch64-apple-darwin.tar.gz"
+      sha256 "7a3a46e7253cb6eb5048f6331c0a61557165c61dffab372f428c7f2a80566b65"
 
       def install
         bin.install "run"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/aymericbeaumet/run/releases/download/v0.0.43/run-aarch64-apple-darwin.tar.gz"
-      sha256 "30c4264f73c3e4c769cee5b99e93f847c717e754251ee7aa1e851a8df89c4dec"
+    if Hardware::CPU.intel?
+      url "https://github.com/aymericbeaumet/run/releases/download/0.0.53/run-0.0.53-x86_64-apple-darwin.tar.gz"
+      sha256 "63f3222fa2585e7efe7ec416fe04a6f727a14bf135e119b2570897ce017feccc"
 
       def install
         bin.install "run"
@@ -29,16 +29,16 @@ class Run < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aymericbeaumet/run/releases/download/v0.0.43/run-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "18240a71d268999d2bddba91e32118a63c8c808a8e354d7209c1dedb441fa9e2"
+      url "https://github.com/aymericbeaumet/run/releases/download/0.0.53/run-0.0.53-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "ff5390e10e033d34c0e64aba082602647583c3e5e08df739d2197644398d4ab0"
 
       def install
         bin.install "run"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aymericbeaumet/run/releases/download/v0.0.43/run-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "18a8b2884b164b4dcf54760abf653048126ea54da490d1bd0b861c0b41c26d3a"
+      url "https://github.com/aymericbeaumet/run/releases/download/0.0.53/run-0.0.53-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "cc87781eac0b98da7b417e4644a2209e5ad51a2105d43f178abc64b31780357f"
 
       def install
         bin.install "run"
